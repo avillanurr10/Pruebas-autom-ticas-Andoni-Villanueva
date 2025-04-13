@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CuentaTest {
 
-
+private Cuenta cuenta; // inicializar mi variable cuenta
     @BeforeEach
     /*
     he creado una nueva cuenta y
