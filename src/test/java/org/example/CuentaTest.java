@@ -38,16 +38,21 @@ class CuentaTest {
         cuenta.setSaldo(250.0);
         assertEquals(250.0, cuenta.getSaldo(), 0.001);
     }
-
-    @org.junit.jupiter.api.Test
-    void ingresarDinero() {
+// inserta
+   @Test
+    public void ingresarDinero() {
+        cuenta.ingresarDinero(50.0);
+        assertEquals(150.0, cuenta.getSaldo(), 0.001);
     }
-
-    @org.junit.jupiter.api.Test
-    void extraerDinero() {
+// saca
+    @Test
+    public void extraerDinero() {
+        cuenta.extraerDinero(30.0);
+        assertEquals(70.0, cuenta.getSaldo(), 0.001);
     }
-
-    @org.junit.jupiter.api.Test
-    void mostrarCuenta() {
+//muestra
+    @Test
+    public void mostrarCuenta() {
+        assertDoesNotThrow(() -> cuenta.mostrarCuenta());
     }
 }
