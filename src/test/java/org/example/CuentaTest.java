@@ -22,16 +22,21 @@ class CuentaTest {
         assertEquals("12345", cuenta.getNumero());
     }
 
-    @org.junit.jupiter.api.Test
-    void getSaldo() {
+   @Test
+    public void getSaldo() {
+        assertEquals(100.0, cuenta.getSaldo(), 0.001);
     }
 
-    @org.junit.jupiter.api.Test
-    void setNumero() {
+    @Test
+    public void setNumero() {
+        cuenta.setNumero("54321");
+        assertEquals("54321", cuenta.getNumero());
     }
 
-    @org.junit.jupiter.api.Test
-    void setSaldo() {
+    @Test
+    public void setSaldo() {
+        cuenta.setSaldo(250.0);
+        assertEquals(250.0, cuenta.getSaldo(), 0.001);
     }
 
     @org.junit.jupiter.api.Test
